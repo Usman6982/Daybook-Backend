@@ -10,7 +10,7 @@ const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var fetchuser = require ('../middleware/fetchuser')
 const JWT_SECRET = 'Harryisagoodb$oy';
-//Route 1: Create a User using:POST "/api/auth/createuser".No login required   
+//Route 1: Create a User using:POST "/api/notes/createuser".No login required   
 router.post('/CreateUser', [
     body('name', 'Enter a valid name').isLength({ min: 5 }),
     body('email', 'Enter a valid email').isEmail(),
@@ -50,7 +50,8 @@ router.post('/CreateUser', [
         }
     })
 
-//Route 2: Authenticate a User using:POST "/api/auth/login".No login required
+//Route 2: Authenticate a User using:POST "/api/notes/login".No login required
+
 router.post('/login', [
     body('email', 'Enter a valid email').isEmail(),
     body('password', 'password cannot be blank').exists(),
@@ -85,7 +86,8 @@ router.post('/login', [
         }
     }])
 
-//Route 3:Get loggedin a User Details using:POST "/api/auth/getuser".login required
+//Route 3:Get loggedin a User Details using:POST "/api/notes/getuser".login required
+
 router.post('/getuser', fetchuser, async (req, res) => {
     try {
         userId = req.user.id;
