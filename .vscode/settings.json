@@ -1,6 +1,12 @@
 {
     "cSpell.words": [
+        "addnote",
         "authtoken",
-        "Harryisagoodb"
+        "fetchallnote",
+        "fetchallnotes",
+        "fetchuser",
+        "getuser",
+        "Harryisagoodb",
+        "loggedin"
     ]
 }

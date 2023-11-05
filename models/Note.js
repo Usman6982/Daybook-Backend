@@ -1,6 +1,10 @@
 const mongoose = require ('mongoose');
-// eslint-disable-next-line
+const {Schema} = mongoose;
 const NotesSchema = new Schema({
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'user'
+    },
      
         title:{
             type: String,
