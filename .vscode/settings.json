@@ -2,6 +2,7 @@
     "cSpell.words": [
         "addnote",
         "authtoken",
+        "deletenote",
         "fetchallnote",
         "fetchallnotes",
         "fetchuser",
